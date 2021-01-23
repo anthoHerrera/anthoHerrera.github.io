@@ -13,7 +13,13 @@ tinymce.init({
         editor.ui.registry.addMenuItem('newtrans', {
             text: 'New Transcription',
             onAction: function () {
-                location.reload();
+                var txt = 'All system configurations will be reset for the new transcription. Do you want to continue?'; 
+                var r = confirm(txt);
+                if (r == true) {
+                    tinyMCE.activeEditor.setContent('');
+                    location.reload();
+                }
+                
             }
         });
 
@@ -77,44 +83,6 @@ tinymce.init({
 
             }
         });
-        /*
-        editor.ui.registry.addButton('AutoTranscriptButton', {
-            icon: "temporary-placeholder",
-            tooltip: 'AutoTranscrip',
-            onAction: function (_) {
-                if ('webkitSpeechRecognition' in window) {
-                    var speechRecognizer = new webkitSpeechRecognition();
-                    speechRecognizer.continuous = true;
-                    speechRecognizer.interimResults = true;
-                    speechRecognizer.lang = 'en-US';
-                    speechRecognizer.start();
-
-                    var finalTranscripts = '';
-
-                    speechRecognizer.onresult = function (event) {
-
-                        var interimTranscripts = '';
-                        for (var i = event.resultIndex; i < event.results.length; i++) {
-                            var transcript = event.results[i][0].transcript;
-                            console.log(event.results[i][0]);
-                            transcript.replace("\n", "<br>");
-                            if (event.results[i].isFinal) {
-                                finalTranscripts += transcript;
-                            } else {
-                                interimTranscripts += transcript;
-                            }
-                        }
-                        tinymce.activeEditor.setContent(finalTranscripts + '<span style="color: #999">' + interimTranscripts + '</span>');
-                    };
-                    speechRecognizer.onerror = function (event) {
-
-                    };
-                } else {
-                    result.innerHTML = 'Your browser is not supported. Please download Google chrome or Update your Google chrome!!';
-                }
-
-            }
-        });*/
 
         editor.on('keydown', function (e) {
             console.log('The Editor has initialized.');

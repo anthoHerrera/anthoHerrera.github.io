@@ -7,7 +7,6 @@ ul.classList.add("list-group-flush");
 snippetList.appendChild(ul);
 for (key in snippets) {
     var li = document.createElement("li");
-    //li.appendChild(document.createTextNode(key + ' press key ' + '<strong>' + snippets[key].toUpperCase() + '</strong>' + ' to insert'));
     li.innerHTML = key + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + '<strong>' + snippets[key].toUpperCase() + '</strong>';
     li.classList.add("list-group-item");
     ul.appendChild(li);
@@ -23,7 +22,6 @@ function updateSnippetList() {
     snippetList.appendChild(ul);
     for (key in snippets) {
         var li = document.createElement("li");
-        //li.appendChild(document.createTextNode(key + ' ' + snippets[key].toUpperCase()));
         li.innerHTML = key + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + '<strong>' + snippets[key].toUpperCase() + '</strong>';
         li.classList.add("list-group-item");
         ul.appendChild(li);
@@ -46,15 +44,30 @@ function addSnippets() {
 }
 
 function snippetEditor(event) {
+    var snippet = null;
     for (key in window.snippets) {
-        console.log('snip ' + window.snippets[key]);
-        console.log('event which ' + event.which);
-        console.log('code ' + dict_keysCodes[window.snippets[key]]);
-
+        
+        var keyStr = ["Control", "Shift", "Alt", "Meta"].includes(event.key) ? "" : event.key + " ";
+        var reportStr = (event.ctrlKey ? "crtl+": "") +
+            (event.shiftKey ? "shift+" : "") +
+            (event.altKey ? "alt+" : "") +
+            (event.metaKey ? "meta+" : "") +
+            keyStr.toLowerCase().trim();
+       
         if (event.which == dict_keysCodes[window.snippets[key]]) {
             console.log('ento if');
             var videofile = document.getElementById("videoLocal");
-            return key + ' in ' + '<a href="#">' + formatTime(videofile.currentTime) + '</a>' + ': ';
+            snippet =  key + ' in ' + '<a href="#">' + formatTime(videofile.currentTime) + '</a>' + ': ';
+        }else if(reportStr == window.snippets[key]) {
+            console.log('ento if');
+            var videofile = document.getElementById("videoLocal");
+            var mysnippet =  key + ' in ' + '<a href="#">' + formatTime(videofile.currentTime) + '</a>' + ': ';
+            tinymce.activeEditor.insertContent(mysnippet);
+            event.stopPropagation ();
+            event.preventDefault ();
         }
+        
     }
+    
+    return snippet;
 }

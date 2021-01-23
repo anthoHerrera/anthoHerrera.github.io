@@ -33,7 +33,6 @@ function recordSequence() {
 function recordSequence2() {
     document.getElementById('forwardBtn').innerHTML = 'Press any key';
     Mousetrap.record(function (sequence) {
-        //Mousetrap.unbind(window.keyPlayPause);
         window.keyForward = sequence.join(' ');
         console.log(window.keyForward);
         document.getElementById('forwardKey').innerHTML = '<strong>' + window.keyForward.toUpperCase() + '</strong>';
@@ -45,7 +44,6 @@ function recordSequence2() {
 function recordSequence3() {
     document.getElementById('rewindBtn').innerHTML = 'Press any key';
     Mousetrap.record(function (sequence) {
-        //Mousetrap.unbind(window.keyPlayPause);
         window.keyRewind = sequence.join(' ');
         console.log(window.keyRewind);
         document.getElementById('rewindKey').innerHTML = '<strong>' + window.keyRewind.toUpperCase() + '</strong>';
@@ -57,7 +55,6 @@ function recordSequence3() {
 function recordSequence4() {
     document.getElementById('speedBtn').innerHTML = 'Press any key';
     Mousetrap.record(function (sequence) {
-        //Mousetrap.unbind(window.keyPlayPause);
         window.keySpeed = sequence.join(' ');
         console.log(window.keySpeed);
         document.getElementById('speedKey').innerHTML = '<strong>' + window.keySpeed.toUpperCase() + '</strong>';
@@ -70,7 +67,6 @@ function recordSequence4() {
 function recordSequence5() {
     document.getElementById('slowBtn').innerHTML = 'Press any key';
     Mousetrap.record(function (sequence) {
-        //Mousetrap.unbind(window.keyPlayPause);
         window.keyslow = sequence.join(' ');
         console.log(window.keyslow);
         document.getElementById('slowKey').innerHTML = '<strong>' + window.keyslow.toUpperCase() + '</strong>';
