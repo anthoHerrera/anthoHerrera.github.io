@@ -48,7 +48,7 @@ function snippetEditor(event) {
     for (key in window.snippets) {
         
         var keyStr = ["Control", "Shift", "Alt", "Meta"].includes(event.key) ? "" : event.key + " ";
-        var reportStr = (event.ctrlKey ? "crtl+": "") +
+        var reportStr = (event.ctrlKey ? "ctrl+": "") +
             (event.shiftKey ? "shift+" : "") +
             (event.altKey ? "alt+" : "") +
             (event.metaKey ? "meta+" : "") +
