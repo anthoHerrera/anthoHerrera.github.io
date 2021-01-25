@@ -5,4 +5,4 @@ This is a web transcription systema to make manual transcription from interviews
 Select an audio or video file.
 
 
-<a src="https://drive.google.com/file/d/1bjyC6LsFiiitxdS-g-EEOz5DCv2C96R8/preview" width="640" height="480"/>
+![Image of video](https://drive.google.com/uc?export=view&id=1bjyC6LsFiiitxdS-g-EEOz5DCv2C96R8)
