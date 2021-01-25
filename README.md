@@ -19,3 +19,10 @@ Then click on keyboard shortcuts.
 
 ![Image of video3](https://drive.google.com/uc?export=view&id=130Ydr6Yv3nAnbSydIokWEZdrh1ZKZaJK)
 
+The keyboard shortcuts settings show the assigned keys, and the user can change them if the user wishes.
+
+![Image of video4](https://drive.google.com/uc?export=view&id=11iqM7OPYXBleziPUYFoDOSkSeMr_kjAi)
+
+The user can also change some parameters of the video manipulation for this by clicking on settings then on video settings.
+
+![Image of video5](https://drive.google.com/uc?export=view&id=14Hjj-8LFm-WPiYbJhlh2X5fVTYZAAggq)
