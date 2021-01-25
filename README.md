@@ -26,3 +26,12 @@ The keyboard shortcuts settings show the assigned keys, and the user can change 
 The user can also change some parameters of the video manipulation for this by clicking on settings then on video settings.
 
 ![Image of video5](https://drive.google.com/uc?export=view&id=14Hjj-8LFm-WPiYbJhlh2X5fVTYZAAggq)
+
+The following configuration is displayed, and the user can change the parameters of rewind, forward, slow down and speed up of the video playback.
+
+![Image of video6](https://drive.google.com/uc?export=view&id=1bYvPi6f2kwoH79kToJ_4igNEfWrmpO1R)
+
+## Snippets
+While transcribing the user can add snippets to his transcription for this by clicking on the input name in the snippet section and after clicking on assign trigger, the snippet is added to the list of snippets and the user pressing the assigned trigger can embed the snippet in the text editor.
+
+![Image of video7](https://drive.google.com/uc?export=view&id=13wv48Cn9y6CGK5axFDHjKsfUToSN16nH)
